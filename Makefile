@@ -28,7 +28,7 @@ clean:
 asm: kiss_fft.s
 
 shared:
-	gcc kiss_fft.c -dynamiclib -I/usr/include/malloc -o kiss_fft.1.3.0.dylib -current_version 1.3.0
+	gcc kiss_fft.c tools/kiss_fftr.c -dynamiclib -I. -I/usr/include/malloc -o kiss_fft.1.3.0.dylib -current_version 1.3.0
 
 install: shared
 	mv kiss_fft.1.3.0.dylib /usr/local/lib/kiss_fft.dylib
