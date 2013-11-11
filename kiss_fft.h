@@ -44,7 +44,7 @@ extern "C" {
 #else
 # ifndef kiss_fft_scalar
 /*  default is float */
-#   define kiss_fft_scalar double /* for Extempore */
+#   define kiss_fft_scalar float /* for Extempore */
 # endif
 #endif
 
