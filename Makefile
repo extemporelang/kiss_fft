@@ -67,7 +67,7 @@ shared: shared/$(lib_so)
 
 install: shared/$(lib_so)
 	mv shared/$(lib_so) $(PREFIX)/lib
-	ln -sf shared/$(lib_so) $(PREFIX)$(linkname)
+	ln -sf shared/$(lib_so) $(PREFIX)/$(linkname)
 	cp kiss_fft.h $(PREFIX)/include
 	cp tools/kiss_fftr.h $(PREFIX)/include
 
