@@ -72,11 +72,10 @@ class kissfft
             uint64_t s = 2;
             double sqrt_nfft = std::sqrt(nfft);
             uint64_t i = 0;
-            for (i=2; i<sqrt_nfft; ++i) {
+            for (i = 2; i<sqrt_nfft; ++i) {
                 if (nfft % i ==0) {
                     s = s + 2;
                 }
-
             }
 
             if (i == sqrt_nfft)   {
