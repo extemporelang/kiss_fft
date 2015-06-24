@@ -280,7 +280,7 @@ class kissfft
             cpx_type * twiddles = &_twiddles[0];
             cpx_type t;
             uint64_t Norig = _nfft;
-            cpx_type scratchbuf[p];
+            cpx_type scratchbuf = new cpx_type[p];
 
             for ( u=0; u<m; ++u ) {
                 k=u;
@@ -302,6 +302,7 @@ class kissfft
                     k += m;
                 }
             }
+            delete[] scratchbuf;
         }
 
         uint64_t _nfft;
