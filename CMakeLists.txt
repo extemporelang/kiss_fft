@@ -15,7 +15,7 @@ add_library(kiss_fft SHARED
   )
 target_include_directories(kiss_fft
   PRIVATE tools
-  PRIVATE .)
+  PRIVATE ${CMAKE_SOURCE_DIR})
 
 install(TARGETS kiss_fft
   LIBRARY DESTINATION lib
