@@ -6,9 +6,7 @@ add_library(kiss_fft SHARED
   # main FFT implementation
   kiss_fft.c
   # from the tools/ directory
-  tools/fftutil.c 
   tools/kfc.c 
-  tools/kiss_fastfir.c 
   tools/kiss_fftnd.c 
   tools/kiss_fftndr.c 
   tools/kiss_fftr.c
