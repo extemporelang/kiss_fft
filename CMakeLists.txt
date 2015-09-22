@@ -14,13 +14,13 @@ add_library(kiss_fft SHARED
   tools/kiss_fftr.c
   )
 target_include_directories(kiss_fft
-  PRIVATE tools
-  PRIVATE ${CMAKE_SOURCE_DIR})
+  PRIVATE .
+  PRIVATE tools)
 
 install(TARGETS kiss_fft
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION lib)
 
 install(
-  FILES kiss_fft.h kfc.h kiss_fftnd.h kiss_fftndr.h kiss_fftr.h
+  FILES kiss_fft.h tools/kfc.h tools/kiss_fftnd.h tools/kiss_fftndr.h tools/kiss_fftr.h
   DESTINATION include)
