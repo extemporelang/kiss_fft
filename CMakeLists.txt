@@ -11,6 +11,12 @@ add_library(kiss_fft SHARED
   tools/kiss_fftndr.c 
   tools/kiss_fftr.c
   )
+
+# on Windows, make sure that the symbols get exported
+if(WIN32)
+  target_sources(kiss_fft PRIVATE kiss_fft.def)
+endif()
+
 target_include_directories(kiss_fft
   PRIVATE .
   PRIVATE tools)
