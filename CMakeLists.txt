@@ -22,8 +22,9 @@ target_include_directories(kiss_fft
   PRIVATE tools)
 
 install(TARGETS kiss_fft
-  LIBRARY DESTINATION lib
-  RUNTIME DESTINATION lib)
+  RUNTIME DESTINATION lib
+  ARCHIVE DESTINATION lib # for .lib files on Windows
+  LIBRARY DESTINATION lib)
 
 install(
   FILES kiss_fft.h tools/kfc.h tools/kiss_fftnd.h tools/kiss_fftndr.h tools/kiss_fftr.h
